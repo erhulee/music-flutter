@@ -93,11 +93,12 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       key: _key,
       backgroundColor: Color.fromARGB(255, 27, 27, 27),
-      body: Column(
+      body: SafeArea(
+          child: Column(
         children: [
           SearchBar(goResult, goBack),
           Padding(
-            padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+            padding: EdgeInsets.fromLTRB(20, 10, 0, 10),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -108,7 +109,7 @@ class _SearchPageState extends State<SearchPage> {
           ),
           SearchHistoryList(reseach_history)
         ],
-      ),
+      )),
     );
   }
 }

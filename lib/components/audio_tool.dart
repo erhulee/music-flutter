@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:notions_todo/audio/audio_manager.dart';
+import 'package:notions_todo/components/candidate_list.dart';
 import 'package:provider/provider.dart';
+
+import '../modal/Song.dart';
 
 class AudioTool extends StatelessWidget {
   const AudioTool({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<AudioManager>(context));
+    AudioManager manager = Provider.of(context);
+    Song song = manager.activeSong ?? Song.empty();
     return Container(
         height: 65,
         child: DecoratedBox(
@@ -32,34 +36,49 @@ class AudioTool extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "那女孩对我评说",
+                            song.name,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600),
                           ),
                           Text(
-                            "范玮琪",
+                            song.artist,
                             style: TextStyle(
                                 color: Color.fromARGB(122, 220, 220, 220)),
                           )
                         ],
                       ),
                       flex: 1),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.pause_circle_filled,
-                      color: Colors.white,
-                      size: 30,
+                  if (manager.isPlaying)
+                    IconButton(
+                      onPressed: () {
+                        manager.pause();
+                      },
+                      icon: Icon(
+                        Icons.pause_circle_filled,
+                        color: Colors.white,
+                        size: 30,
+                      ),
                     ),
-                  ),
+                  if (!manager.isPlaying)
+                    IconButton(
+                      onPressed: () {
+                        manager.play();
+                      },
+                      icon: Icon(
+                        Icons.play_circle_filled,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
                   IconButton(
                     onPressed: () {
                       showModalBottomSheet(
                           context: context,
-                          builder: (context) {
-                            return Container();
-                          });
+                          builder: (context) => BottomSheet(
+                              onClosing: () {},
+                              builder: (context) => CandidateList()),
+                          backgroundColor: Color.fromARGB(255, 255, 0, 0));
                     },
                     icon: Icon(
                       Icons.menu,

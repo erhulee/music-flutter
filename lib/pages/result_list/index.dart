@@ -60,21 +60,22 @@ class _ResultListPageState extends State<ResultListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _key,
-      backgroundColor: Color(0x1B1B25),
-      body: Column(
-        children: [
-          GestureDetector(
-            child: SearchBar(goResult, goBack),
-            onTap: onSearchTap,
+        key: _key,
+        backgroundColor: Color(0x1B1B25),
+        body: SafeArea(
+          child: Column(
+            children: [
+              GestureDetector(
+                child: SearchBar(goResult, goBack),
+                onTap: onSearchTap,
+              ),
+              Expanded(
+                child: SongList(_list),
+                flex: 1,
+              ),
+              AudioTool()
+            ],
           ),
-          Expanded(
-            child: SongList(_list),
-            flex: 1,
-          ),
-          AudioTool()
-        ],
-      ),
-    );
+        ));
   }
 }

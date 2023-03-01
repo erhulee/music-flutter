@@ -16,7 +16,7 @@ class CircleIconButton extends StatelessWidget {
           borderRadius: BorderRadiusDirectional.all(Radius.circular(100))),
       child: IconButton(
           icon: Icon(
-            size: 15,
+            size: 20,
             this.icon,
             color: Color.fromARGB(255, 255, 255, 255),
           ),

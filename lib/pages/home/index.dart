@@ -45,7 +45,8 @@ class _HomeState extends State<Home> {
   // Create a key
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       key: _key,
       backgroundColor: Color.fromARGB(255, 27, 27, 27),
       body: Column(
@@ -60,6 +61,6 @@ class _HomeState extends State<Home> {
           AudioTool(),
         ],
       ),
-    );
+    ));
   }
 }

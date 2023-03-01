@@ -17,8 +17,7 @@ class SongList extends StatelessWidget {
               )),
           itemBuilder: ((context, index) => Padding(
                 padding: EdgeInsets.only(top: 0),
-                child: SongItem(songlist[index].id!, songlist[index].name!,
-                    songlist[index].artist!),
+                child: SongItem(songlist[index]),
               )),
         )
         // ListView(shrinkWrap: true,  children: songListWidgts)

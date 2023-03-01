@@ -31,10 +31,10 @@ class HeaderBar extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return SearchPage();
               }));
-            }, 60),
+            }, 50),
             Padding(
                 padding: EdgeInsets.only(left: 15),
-                child: CircleIconButton(Icons.notifications, () {}, 60)),
+                child: CircleIconButton(Icons.notifications, () {}, 50)),
           ],
         )
       ]),

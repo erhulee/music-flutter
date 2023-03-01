@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Provider(
+    return ChangeNotifierProvider(
         create: (_) => AudioManager(),
         child: MaterialApp(
           title: 'Flutter Demo',
@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
                 createMaterialColor(Color.fromARGB(255, 246, 246, 246)),
           ),
           routes: {
-            "/search_result": (context) => ResultListPage(),
             "/": ((context) => Home(title: " ")),
+            "/search_result": (context) => ResultListPage(),
             "/search": (context) => SearchPage()
           },
         ));

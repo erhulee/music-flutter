@@ -86,13 +86,16 @@ class NetEase {
       }).map((result) {
         print("-------item----");
         print(result['ar'][0]['id']);
-
         Song song = Song(
           result['id'],
           // "",
-          // album: result['al']['name'],
+          // album:
+          // albumPost
           result['name'],
           result['ar'].map((aut) => aut['name']).join(','),
+
+          result['al']['picUrl'],
+          //  result['al']['picUrl'],
           // duration: Duration(milliseconds: result['dt']),
           // from: '网易云',
           // artistAvatar: Uri.parse(result['al']['picUrl']),

@@ -11,7 +11,7 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = TextEditingController();
     return Padding(
-      padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
+      padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
