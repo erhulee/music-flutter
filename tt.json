@@ -1,0 +1,87 @@
+{
+    "needLogin": true,
+    "result": {
+        "searchQcReminder": null,
+        "songs": [
+            {
+                "name": "二三",
+                "id": 1931308845,
+                "pst": 0,
+                "t": 0,
+                "ar": [
+                    {
+                        "id": 51952374,
+                        "name": "二三",
+                        "tns": [],
+                        "alias": []
+                    }
+                ],
+                "alia": [],
+                "pop": 10.0,
+                "st": 0,
+                "rt": "",
+                "fee": 8,
+                "v": 7,
+                "crbt": null,
+                "cf": "",
+                "al": {
+                    "id": 142352482,
+                    "name": "二三",
+                    "picUrl": "http://p4.music.126.net/xgkjdcMn4ODKvb6hj7TEEw==/109951167189143024.jpg",
+                    "tns": [],
+                    "pic_str": "109951167189143024",
+                    "pic": 109951167189143024
+                },
+                "dt": 35155,
+                "h": {
+                    "br": 320010,
+                    "fid": 0,
+                    "size": 1408365,
+                    "vd": 33569.0,
+                    "sr": 48000
+                },
+                "m": {
+                    "br": 192010,
+                    "fid": 0,
+                    "size": 845037,
+                    "vd": 36215.0,
+                    "sr": 48000
+                },
+                "l": {
+                    "br": 128010,
+                    "fid": 0,
+                    "size": 563373,
+                    "vd": 38033.0,
+                    "sr": 48000
+                },
+                "sq": {
+                    "br": 693278,
+                    "fid": 0,
+                    "size": 3046527,
+                    "vd": 33564.0,
+                    "sr": 48000
+                },
+                "hr": null,
+                "a": null,
+                "cd": "01",
+                "no": 1,
+                "rtUrl": null,
+                "ftype": 0,
+                "rtUrls": [],
+                "djId": 0,
+                "copyright": 0,
+                "s_id": 0,
+                "mark": 655360,
+                "originCoverType": 0,
+                "originSongSimpleData": null,
+                "tagPicList": null,
+                "resourceState": true,
+                "version": 7,
+                "songJumpInfo": null,
+                "entertainmentTags": null,
+                "single": 0,
+                "noCopyrightRcmd": null,
+                "rtype": 0,
+                "rurl": null,
+                "mst": 9
+            }]}}
